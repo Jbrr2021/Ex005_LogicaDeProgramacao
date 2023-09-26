@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Fatorial</title>
+    <script type="text/javascript">
+      function calcularFatorial(numero) {
+        if (numero < 0) {
+          return "Erro: Não é possível calcular o fatorial de um número negativo.";
+        } else if (numero === 0 || numero === 1) {
+          return 1;
+        } else {
+          var resultado = 1;
+          for (var i = 2; i <= numero; i++) {
+            resultado *= i;
+          }
+          return resultado;
+        }
+      }
+
+      function calcularEExibirFatorial() {
+        var numero = parseInt(
+          prompt("Digite um número para calcular o fatorial:")
+        );
+
+        if (isNaN(numero)) {
+          alert("Por favor, digite um número válido.");
+          return;
+        }
+
+        var resultado = calcularFatorial(numero);
+        alert("O fatorial de " + numero + " é: " + resultado);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calcular Fatorial</h1>
+    <button onclick="calcularEExibirFatorial()">Calcular Fatorial</button>
+  </body>
+</html>

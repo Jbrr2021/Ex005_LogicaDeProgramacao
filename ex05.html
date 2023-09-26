@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área e Perímetro de um Círculo</title>
+    <script type="text/javascript">
+      function calcularAreaEPerimetro() {
+        var raio = parseFloat(prompt("Digite o raio do círculo:"));
+
+        if (isNaN(raio) || raio <= 0) {
+          alert("Por favor, digite um valor válido para o raio.");
+          return;
+        }
+
+        var area = Math.PI * Math.pow(raio, 2);
+        var perimetro = 2 * Math.PI * raio;
+
+        alert(
+          "Área do círculo: " +
+            area.toFixed(2) +
+            "\nPerímetro do círculo: " +
+            perimetro.toFixed(2)
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calcular Área e Perímetro de um Círculo</h1>
+    <button onclick="calcularAreaEPerimetro()">Calcular</button>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cubo de um Número</title>
+    <script type="text/javascript">
+      function calcularCubo() {
+        var numero = parseFloat(prompt("Digite um número:"));
+
+        if (isNaN(numero)) {
+          alert("Por favor, digite um valor válido.");
+          return;
+        }
+
+        var cubo = Math.pow(numero, 3);
+        alert("O cubo de " + numero + " é: " + cubo);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calcular Cubo de um Número</h1>
+    <button onclick="calcularCubo()">Calcular Cubo</button>
+  </body>
+</html>

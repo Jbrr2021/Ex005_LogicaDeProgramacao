@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retorno de Investimento</title>
+    <script type="text/javascript">
+      function calcularMontante() {
+        var capitalInicial = parseFloat(
+          prompt("Digite o capital inicial investido:")
+        );
+        var taxaJuros = parseFloat(
+          prompt("Digite a taxa de juros mensal (em percentual):")
+        );
+        var tempoMeses = parseInt(
+          prompt("Digite o tempo do investimento em meses:")
+        );
+
+        if (
+          isNaN(capitalInicial) ||
+          isNaN(taxaJuros) ||
+          isNaN(tempoMeses) ||
+          capitalInicial <= 0 ||
+          taxaJuros <= 0 ||
+          tempoMeses <= 0
+        ) {
+          alert(
+            "Por favor, digite valores válidos para capital, taxa de juros e tempo do investimento."
+          );
+          return;
+        }
+
+        var i = taxaJuros / 100;
+        var montante = capitalInicial * Math.pow(1 + i, tempoMeses);
+
+        alert("O montante do investimento é: R$ " + montante.toFixed(2));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calcular Retorno de Investimento</h1>
+    <button onclick="calcularMontante()">Calcular Montante</button>
+  </body>
+</html>

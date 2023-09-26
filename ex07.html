@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contar Caractere</title>
+    <script type="text/javascript">
+      function contarCaractere() {
+        var string = prompt("Digite uma string:");
+        var caractere = prompt("Digite um caractere para contar:");
+
+        if (!string || !caractere) {
+          alert("Por favor, insira uma string e um caractere.");
+          return;
+        }
+
+        var contador = 0;
+        for (var i = 0; i < string.length; i++) {
+          if (string[i] === caractere) {
+            contador++;
+          }
+        }
+
+        alert(
+          "O caractere '" +
+            caractere +
+            "' aparece " +
+            contador +
+            " vezes na string."
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Contar Caractere</h1>
+    <button onclick="contarCaractere()">Contar Caractere</button>
+  </body>
+</html>

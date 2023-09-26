@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Número Primo</title>
+    <script type="text/javascript">
+      function verificarPrimo() {
+        var numero = parseInt(prompt("Digite um número:"));
+
+        if (isNaN(numero) || numero <= 1) {
+          alert("Por favor, digite um número inteiro maior que 1.");
+          return;
+        }
+
+        var primo = true;
+
+        for (var i = 2; i <= Math.sqrt(numero); i++) {
+          if (numero % i === 0) {
+            primo = false;
+            break;
+          }
+        }
+
+        if (primo) {
+          alert(numero + " é um número primo.");
+        } else {
+          alert(numero + " não é um número primo.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Verificar Número Primo</h1>
+    <button onclick="verificarPrimo()">Verificar Primo</button>
+  </body>
+</html>

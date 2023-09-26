@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Número Invertido</title>
+    <script type="text/javascript">
+      function inverterNumero() {
+        var numero = prompt("Digite um número:");
+        var numeroInvertido = "";
+
+        if (!numero.match(/^\d+$/)) {
+          alert("Por favor, digite um número válido.");
+          return;
+        }
+
+        for (var i = numero.length - 1; i >= 0; i--) {
+          numeroInvertido += numero[i];
+        }
+
+        alert("Número invertido: " + numeroInvertido);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Inverter Número</h1>
+    <button onclick="inverterNumero()">Inverter Número</button>
+  </body>
+</html>

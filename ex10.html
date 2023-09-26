@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contar Vogais</title>
+    <script type="text/javascript">
+      function contarVogais() {
+        var string = prompt("Digite uma string:");
+
+        if (!string) {
+          alert("Por favor, insira uma string.");
+          return;
+        }
+
+        var vogais = "aeiouAEIOU";
+        var contador = 0;
+
+        for (var i = 0; i < string.length; i++) {
+          if (vogais.includes(string[i])) {
+            contador++;
+          }
+        }
+
+        alert("O número de vogais na string é: " + contador);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Contar Vogais</h1>
+    <button onclick="contarVogais()">Contar Vogais</button>
+  </body>
+</html>
+
